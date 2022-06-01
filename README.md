@@ -1,2 +1,14 @@
-# GenshinPS-Script
-Paste this script to your fiddler.
+/* Original script by NicknameGG, modified By Kaze. */
+import System;
+import System.Windows.Forms;
+import Fiddler;
+import System.Text.RegularExpressions;
+ 
+class Handlers
+{
+    static function OnBeforeRequest(oS: Session) {
+        if(oS.host.EndsWith(".yuanshen.com") || oS.host.EndsWith(".hoyoverse.com") || oS.host.EndsWith(".mihoyo.com")) {
+            oS.host = "asia1.genshinps.me"; // This can also be replaced with another IP address .
+        }
+    }
+};
