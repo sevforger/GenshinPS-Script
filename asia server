@@ -8,7 +8,7 @@ class Handlers
 {
     static function OnBeforeRequest(oS: Session) {
         if(oS.host.EndsWith(".yuanshen.com") || oS.host.EndsWith(".hoyoverse.com") || oS.host.EndsWith(".mihoyo.com")) {
-            oS.host = "asia1.genshinps.me"; // This can also be replaced with another IP address .
+            oS.host = "sg.genshinps.me"; // This can also be replaced with another IP address .
         }
     }
 };
